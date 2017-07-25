@@ -48,7 +48,7 @@
         private String foo;
         public void setFoo(String foo) { this.foo = foo; }
         public String getFoo() { return foo; }
-    ```java
+    ```
 
     Câu trả lời: Có, ko thứ gì tồn tại mà ko có lí do cả:
 
@@ -59,6 +59,7 @@
         - Giấu quy trình logic bên dưới: ví dụ getInfo() có thể get nhiều trường trước khi return giá trị
         - Có thể code nhiều mức độ accessibility (public, private, protected) với hàm get/set
         - lazy loading.
+        - ...
 
     Tóm lại là sử dụng get/set cho ban nhiều lựa chọn hơn, tránh lặp lại code, hạn chế tác động của việc thay đổi
     code.
