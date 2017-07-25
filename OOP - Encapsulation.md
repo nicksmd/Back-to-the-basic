@@ -2,7 +2,7 @@
 
 1. Tại sao Encapsulation lại quan trọng?
 
-    Một thức là quan trọng nếu nó có lý do để tồn tại:
+    Một thứ là quan trọng nếu nó có lý do để tồn tại:
 
 - Hiding the complexity:
 
