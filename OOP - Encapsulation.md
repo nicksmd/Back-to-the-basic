@@ -1,5 +1,4 @@
-### Back to the basic. OOP
-##### Encapsulation
+#### Encapsulation
 
 1. Tại sao Encapsulation lại quan trọng?
 
@@ -41,15 +40,15 @@
     Một câu hỏi ám ảnh bao thế hệ sinh viên cntt và cả nhiều kĩ sư non tay.
 
     Có sự khác biệt nào giữa:
-    ~~~~
+    ```java
         public String foo;
-    ~~~~
+    ```
     và
-    ~~~~
+    ```java
         private String foo;
         public void setFoo(String foo) { this.foo = foo; }
         public String getFoo() { return foo; }
-    ~~~~
+    ```java
 
     Câu trả lời: Có, ko thứ gì tồn tại mà ko có lí do cả:
 
