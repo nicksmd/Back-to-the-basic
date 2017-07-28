@@ -86,3 +86,59 @@ public class FlyingBirds extends Bird{
 public class Duck extends FlyingBirds{}
 public class Ostrich extends Bird{}
 ```
+
+Nguyên tắc này có thể hiểu là ko nên sử dụng inheritance khi 2 class ko thực sự
+có quan hệ IS-A:
+
+```cs
+class Person {
+    public int PersonId { get; set; }
+    public string Name { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string Address { get; set; }
+}
+
+class Customer : Person {
+    public int CustomerId { get; set; }
+    public DateTime JoinedDate { get; set; }
+}
+
+class Staff : Person {
+    public int StaffId { get; set; }
+    public string JobTitle { get; set; }
+}
+
+static void SendEmailToCustomers(IEnumerable<Person> everyone) {
+    foreach(Person p in everyone)
+        if(p is Customer)
+            SendEmail(p);
+}
+```
+
+Hàm SendEmailToCustomers() trên sẽ bị sai khi có 1 Person vừa là Customer vừa là Staff (
+Người này sẽ bị gửi email 2 lần). Nguyên nhân là do Custommer và Staff ko có quan hệ IS-A với
+class Person. Chúng chỉ là role, và có thể thay đổi theo thời gian.
+
+```cs
+class Person {
+    public int PersonId { get; set; }
+    public string Name { get; set; }
+    public DateTime DateOfBirth { get; set; }
+    public string Address { get; set; }
+    public List<Role> Roles {get; set;}
+}
+
+class Role{
+    public int Id { get; set; }
+    public void display(){}
+}
+
+class Staff : Role {
+    public string JobTitle { get; set; }
+}
+
+class Custommer: Role{
+    public DateTime JoinedDate { get; set; }
+}
+```
+
