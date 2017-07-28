@@ -42,22 +42,22 @@ public class Person
 {
      public void eat() {  }
      public void sleep() {  }
-     public abstract void talk();
+     public abstract void speak();
 }
 
 public class Vietnamese : Person
 {
     @Override
-    public void talk() {
-        System.out.println("talk vietnamese");
+    public void speak() {
+        System.out.println("speak vietnamese");
     }
 }
 
 public class Dutch : Person
 {
      @Override
-    public void talk() {
-        System.out.println("talk Dutch");
+    public void speak() {
+        System.out.println("speak Dutch");
     }
 }
 ```
