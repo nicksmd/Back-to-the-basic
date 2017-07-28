@@ -116,8 +116,8 @@ static void SendEmailToCustomers(IEnumerable<Person> everyone) {
 ```
 
 Hàm SendEmailToCustomers() trên sẽ bị sai khi có 1 Person vừa là Customer vừa là Staff (
-Người này sẽ bị gửi email 2 lần). Nguyên nhân là do Custommer và Staff ko có quan hệ IS-A với
-class Person. Chúng chỉ là role, và có thể thay đổi theo thời gian.
+Người này sẽ bị gửi email 2 lần). Nguyên nhân là do Customer và Staff ko có thực sự có quan hệ IS-A với
+class Person (Mặc dù trong thực tế, customer và staff đều là người). Chúng chỉ là role, và có thể thay đổi theo thời gian.
 
 ```cs
 class Person {
@@ -137,7 +137,7 @@ class Staff : Role {
     public string JobTitle { get; set; }
 }
 
-class Custommer: Role{
+class Customer: Role{
     public DateTime JoinedDate { get; set; }
 }
 ```
