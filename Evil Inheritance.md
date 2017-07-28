@@ -48,7 +48,7 @@ public class Person
 public class Vietnamese : Person
 {
     @Override
-    public void display() {
+    public void talk() {
         System.out.println("talk vietnamese");
     }
 }
@@ -56,7 +56,7 @@ public class Vietnamese : Person
 public class Dutch : Person
 {
      @Override
-    public void display() {
+    public void talk() {
         System.out.println("talk Dutch");
     }
 }
